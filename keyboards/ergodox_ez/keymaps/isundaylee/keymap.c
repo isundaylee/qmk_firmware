@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [COOK] = LAYOUT_ergodox(
   // left hand
-  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+  KC_ESC,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
   KC_NO,            KC_NO,        KC_UP,          KC_NO,    KC_NO,    KC_NO,    KC_RSFT,
   KC_RSFT,          KC_RIGHT,     KC_DOWN,        KC_LEFT,  KC_NO,    KC_NO,
   KC_RCTRL,         KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_RCTRL,
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,            KC_NO,        KC_NO,
 
   // right hand
-  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_ESC,
   KC_LSFT,          KC_NO,        KC_NO,          KC_NO,    KC_W,     KC_NO,    KC_NO,
                     KC_NO,        KC_NO,          KC_D,     KC_S,     KC_A,     KC_LSFT,
   KC_LCTRL,         KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_LCTRL,
