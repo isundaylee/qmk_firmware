@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,            LSFT(KC_P),   KC_DQUO,        KC_PLUS,  KC_MINS,  KC_NO,    KC_NO,
   KC_NO,            KC_P,         KC_QUOTE,       KC_RBRC,  KC_LBRC,  KC_EQL,
   KC_NO,            KC_BSLASH,    KC_GT,          KC_LT,    KC_PIPE,  KC_UNDS,  KC_NO,
-  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,
+  KC_NO,            KC_END,       KC_PGUP,        KC_PGDN,  KC_HOME,
 
   KC_NO,            DF(COOK),
   KC_NO,
