@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   KC_NO,            DF(COOK),
   KC_NO,
-  KC_NO,            KC_NO,        KC_NO,
+  KC_NO,            KC_DELETE,    KC_NO,
 
   // right hand
   KC_F6,            KC_F5,        KC_F4,          KC_F3,            KC_F2,    KC_F1,    KC_NO,
