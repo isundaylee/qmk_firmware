@@ -15,7 +15,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(
-  // left hand
+  // RIGHT
   KC_NO,            KC_EQL,       KC_MINS,        KC_0,     KC_9,     KC_8,     KC_7,
   KC_NO,            KC_P,         KC_O,           KC_I,     KC_U,     KC_Y,     KC_NO,
   KC_RCTRL,         KC_SCOLON,    KC_L,           KC_K,     KC_J,     KC_H,
@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,
   KC_ENTER,         KC_BSPACE,    KC_NO,
 
-  // right hand
+  // LEFT
   KC_6,             KC_5,         KC_4,           KC_3,     KC_2,     KC_1,     KC_GRAVE,
   KC_NO,            KC_T,         KC_R,           KC_E,     KC_W,     KC_Q,     KC_TAB,
                     KC_G,         KC_F,           KC_D,     KC_S,     KC_A,     LCTL_T(KC_ESC),
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [SYMB] = LAYOUT_ergodox(
-  // left hand
+  // RIGHT
   KC_NO,            KC_F12,       KC_F11,         KC_F10,   KC_F9,    KC_F8,    KC_F7,
   KC_NO,            LSFT(KC_P),   KC_DQUO,        KC_PLUS,  KC_MINS,  KC_NO,    KC_NO,
   KC_NO,            KC_P,         KC_QUOTE,       KC_RBRC,  KC_LBRC,  KC_EQL,
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,
   KC_NO,            KC_DELETE,    KC_NO,
 
-  // right hand
+  // LEFT
   KC_F6,            KC_F5,        KC_F4,          KC_F3,            KC_F2,    KC_F1,    KC_NO,
   KC_NO,            KC_NO,        KC_NO,          KC_NO,            KC_NO,    KC_NO,    KC_NO,
                     KC_NO,        KC_RCBR,        KC_LCBR,          KC_NO,    KC_NO,    KC_TRNS,
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [NUMS] = LAYOUT_ergodox(
-  // left hand
+  // RIGHT
   KC_NO,            KC_NO,            KC_KP_ASTERISK,     KC_KP_SLASH,      KC_NO,        KC_NO,    KC_NO,
   KC_NO,            KC_KP_MINUS,      KC_KP_9,            KC_KP_8,          KC_KP_7,      KC_NO,    KC_NO,
   KC_NO,            KC_KP_PLUS,       KC_KP_6,            KC_KP_5,          KC_KP_4,      KC_NO,
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,
   KC_ENTER,         KC_NO,        KC_NO,
 
-  // right hand
+  // LEFT
   KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
   KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
                     KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [COOK] = LAYOUT_ergodox(
-  // left hand
+  // RIGHT
   KC_ESC,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
   KC_NO,            KC_NO,        KC_UP,          KC_NO,    KC_NO,    KC_NO,    KC_RSFT,
   KC_RSFT,          KC_RIGHT,     KC_DOWN,        KC_LEFT,  KC_NO,    KC_NO,
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,
   KC_NO,            KC_NO,        KC_NO,
 
-  // right hand
+  // LEFT
   KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_ESC,
   KC_LSFT,          KC_NO,        KC_NO,          KC_NO,    KC_W,     KC_NO,    KC_NO,
                     KC_NO,        KC_NO,          KC_D,     KC_S,     KC_A,     KC_LSFT,
