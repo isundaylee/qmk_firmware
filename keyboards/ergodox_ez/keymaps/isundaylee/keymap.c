@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_LCMD,        KC_LALT,  KC_NO,    MO(NUMS), MO(SYMB),
 
   KC_NO,            KC_NO,
-  KC_NO,
-  LCAG(KC_NO),      KC_LCMD,      KC_SPACE
+  LCAG(KC_NO),
+  MO(SYMB),         KC_LCMD,      KC_SPACE
 ),
 
 [SYMB] = LAYOUT_ergodox(
