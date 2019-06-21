@@ -4,7 +4,8 @@
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
-#define COOK 2 // overcooked
+#define NUMS 2
+#define COOK 3 // overcooked
 
 enum custom_keycodes {
   EPRM = SAFE_RANGE,
@@ -30,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,            KC_T,         KC_R,           KC_E,     KC_W,     KC_Q,     KC_TAB,
                     KC_G,         KC_F,           KC_D,     KC_S,     KC_A,     LCTL_T(KC_ESC),
   KC_NO,            KC_B,         KC_V,           KC_C,     KC_X,     KC_Z,     KC_LSPO,
-                                  KC_LCMD,        KC_LALT,  KC_NO,    KC_NO,    MO(SYMB),
+                                  KC_LCMD,        KC_LALT,  KC_NO,    MO(NUMS), MO(SYMB),
 
   KC_NO,            KC_NO,
   KC_NO,
@@ -59,6 +60,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,            KC_NO,
   KC_NO,
   KC_NO,            KC_TRNS,      KC_NO
+),
+
+[NUMS] = LAYOUT_ergodox(
+  // left hand
+  KC_NO,            KC_NO,            KC_KP_ASTERISK,     KC_KP_SLASH,      KC_NO,        KC_NO,    KC_NO,
+  KC_NO,            KC_KP_MINUS,      KC_KP_9,            KC_KP_8,          KC_KP_7,      KC_NO,    KC_NO,
+  KC_NO,            KC_KP_PLUS,       KC_KP_6,            KC_KP_5,          KC_KP_4,      KC_NO,
+  KC_NO,            KC_KP_ENTER,      KC_KP_3,            KC_KP_2,          KC_KP_1,      KC_NO,    KC_NO,
+  KC_NO,            KC_KP_ENTER,      KC_KP_DOT,          KC_KP_0,          KC_KP_0,
+
+  KC_NO,            KC_NO,
+  KC_NO,
+  KC_ENTER,         KC_NO,        KC_NO,
+
+  // right hand
+  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+                    KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+  KC_NO,            KC_NO,        KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+                                  KC_NO,          KC_NO,    KC_NO,    KC_NO,    KC_NO,
+
+  KC_NO,            KC_NO,
+  KC_NO,
+  KC_NO,            KC_NO,        KC_NO
 ),
 
 [COOK] = LAYOUT_ergodox(
