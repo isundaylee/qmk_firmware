@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             LCAG(KC_NO),                        /* | */                               _,    
-                                                        LCTL_T(KC_SPACE), KC_LCMD,          MO(SYMB),                           /* | */                               _,                KC_BSPACE,        KC_ENTER
+                                                        LCTL_T(KC_SPACE), KC_LCMD,          MO(SYMB),                           /* | */                               MO(SYMB),         KC_BSPACE,        KC_ENTER
 ),
 
 [SYMB] = LAYOUT_ergodox_flip_pretty(
