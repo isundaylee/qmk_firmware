@@ -20,11 +20,11 @@
     { L02, L12, L22, L32, L42, L52 },     \
     { L03, L13, L23, L33, L43, L53 },     \
     { L04, L14, L24, L34, L44, L54 },     \
-    { L05, L15, L25, L35, _,     L55 },   \
-    { L06, L16, _,     L36, _,     L56 }, \
+    { L05, L15, L25, L35, KC_NO, L55 },   \
+    { L06, L16, KC_NO, L36, KC_NO, L56 }, \
                                           \
-    { R00, R10, _,     R30,_,     R50 },  \
-    { R01, R11, R21, R31,_,     R51 },    \
+    { R00, R10, KC_NO, R30, KC_NO, R50 },  \
+    { R01, R11, R21, R31, KC_NO, R51 },    \
     { R02, R12, R22, R32, R42, R52 },     \
     { R03, R13, R23, R33, R43, R53 },     \
     { R04, R14, R24, R34, R44, R54 },     \
@@ -35,7 +35,6 @@
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define NUMS 2
-#define COOK 3 // overcooked
 
 enum custom_keycodes {
   EPRM = SAFE_RANGE,
@@ -66,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS,          _,                _,                SGUI(KC_LBRC),    SGUI(KC_RBRC),    _,                _,                _,                KC_UNDS,          KC_PIPE,          KC_LT,            KC_GT,            KC_BSLASH,        _,    
   KC_TRNS,          _,                _,                KC_TRNS,          KC_TRNS,                                                                                  KC_HOME,          KC_PGDN,          KC_PGUP,          KC_END,           _,    
 
-                                                                          _,                _,                                                    DF(COOK),         _,    
+                                                                          _,                _,                                                    _,                _,    
                                                                                             _,                                                    _,    
                                                         _,                KC_TRNS,          _,                                                    _,                KC_DELETE,        KC_NO
 ),
@@ -83,29 +82,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                         _,                _,                _,                                                    _,                _,                KC_ENTER
 ),
 
-[COOK] = LAYOUT_ergodox(
-  // RIGHT
-  KC_ESC,            _,            _,              _,        _,        _,        _,    
-  _,                _,            KC_UP,          _,        _,        _,        KC_RSFT,
-  KC_RSFT,          KC_RIGHT,     KC_DOWN,        KC_LEFT,  _,        _,    
-  KC_RCTRL,         _,            _,              _,        _,        _,        KC_RCTRL,
-  _,                _,            _,              _,        _,    
-
-  _,                DF(BASE),
-  _,    
-  _,                _,            _,    
-
-  // LEFT
-  _,                _,            _,              _,        _,        _,        KC_ESC,
-  KC_LSFT,          _,            _,              _,        KC_W,     _,        _,    
-                    _,            _,              KC_D,     KC_S,     KC_A,     KC_LSFT,
-  KC_LCTRL,         _,            _,              _,        _,        _,        KC_LCTRL,
-                                  _,              _,        _,        _,        _,    
-
-  _,                _,    
-  _,    
-  _,                _,            KC_NO
-  ),
 };
 
 #undef _
