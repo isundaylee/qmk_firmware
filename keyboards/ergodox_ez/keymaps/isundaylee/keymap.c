@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             _,                                  /* | */                               _,    
-                                                        _,                _,                _,                                  /* | */                               _,                _,                KC_ENTER
+                                                        _,                _,                _,                                  /* | */                               _,                KC_BSPACE,        KC_ENTER
 ),
 
 };
