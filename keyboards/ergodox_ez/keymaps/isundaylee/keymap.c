@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [SYMB] = LAYOUT_ergodox_flip_pretty(
   _,                KC_F1,            KC_F2,            KC_F3,            KC_F4,            KC_F5,            KC_F6,            /* | */             KC_F7,            KC_F8,            KC_F9,            KC_F10,           KC_F11,           KC_F12,           _,    
-  _,                _,                _,                _,                _,                _,                KC_VOLU,          /* | */             KC_BRMU,          _,                KC_MINS,          KC_PLUS,          KC_DQUO,          LSFT(KC_P),       _,     
+  LCTL(KC_TAB),     _,                LALT(KC_BSPACE),  _,                _,                _,                KC_VOLU,          /* | */             KC_BRMU,          _,                KC_MINS,          KC_PLUS,          KC_DQUO,          LSFT(KC_P),       _,     
   KC_TRNS,          _,                _,                KC_LCBR,          KC_RCBR,          _,                                  /* | */                               KC_EQL,           KC_LBRC,          KC_RBRC,          KC_QUOTE,         KC_P,             _,    
   KC_TRNS,          _,                _,                SGUI(KC_LBRC),    SGUI(KC_RBRC),    _,                KC_VOLD,          /* | */             KC_BRMD,          KC_UNDS,          KC_PIPE,          KC_LT,            KC_GT,            KC_BSLASH,        _,    
   KC_TRNS,          _,                _,                KC_TRNS,          KC_TRNS,                                              /* | */                                                 KC_HOME,          KC_PGDN,          KC_PGUP,          KC_END,           _,    
