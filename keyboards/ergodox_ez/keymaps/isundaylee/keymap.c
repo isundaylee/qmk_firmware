@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,           KC_Q,             KC_W,             KC_E,             KC_R,             KC_T,             _,                /* | */             _,                KC_Y,             KC_U,             KC_I,             KC_O,             KC_P,             _,    
   LCTL_T(KC_ESC),   KC_A,             KC_S,             KC_D,             KC_F,             KC_G,                               /* | */                               KC_H,             KC_J,             KC_K,             KC_L,             KC_SCOLON,        KC_RCTRL,
   KC_LSPO,          KC_Z,             KC_X,             KC_C,             KC_V,             KC_B,             _,                /* | */             _,                KC_N,             KC_M,             KC_COMMA,         KC_DOT,           KC_SLASH,         KC_RSPC,
-  MO(SYMB),         MO(NUMS),         _,                KC_LALT,          KC_LCMD,                                              /* | */                                                 KC_LEFT,          KC_DOWN,          KC_UP,            KC_RIGHT,         _,    
+  TT(SYMB),         TT(NUMS),         _,                KC_LALT,          KC_LCMD,                                              /* | */                                                 KC_LEFT,          KC_DOWN,          KC_UP,            KC_RIGHT,         _,    
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             LCAG(KC_NO),                        /* | */                               _,    
-                                                        KC_SPACE,         KC_LCMD,          MO(SYMB),                           /* | */                               MO(SYMB),         KC_BSPACE,        KC_ENTER
+                                                        KC_SPACE,         KC_LCMD,          TT(SYMB),                           /* | */                               TT(SYMB),         KC_BSPACE,        KC_ENTER
 ),
 
 [SYMB] = LAYOUT_ergodox_flip_pretty(
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             _,                                  /* | */                               _,    
-                                                        _,                KC_TRNS,          _,                                  /* | */                               _,                KC_DELETE,        KC_NO
+                                                        _,                KC_TRNS,          TT(SYMB),                           /* | */                               KC_TRNS,          KC_DELETE,        KC_NO
 ),
 
 [NUMS] = LAYOUT_ergodox_flip_pretty(
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _,                _,                _,                _,                _,                _,                _,                /* | */             _,                _,                KC_KP_7,          KC_KP_8,          KC_KP_9,          KC_KP_MINUS,      _,    
   _,                _,                _,                _,                _,                _,                                  /* | */                               _,                KC_KP_4,          KC_KP_5,          KC_KP_6,          KC_KP_PLUS,       _,    
   _,                _,                _,                _,                _,                _,                _,                /* | */             _,                _,                KC_KP_1,          KC_KP_2,          KC_KP_3,          KC_KP_ENTER,      _,    
-  _,                _,                _,                _,                _,                                                    /* | */                                                 KC_KP_0,          KC_KP_0,          KC_KP_DOT,        KC_KP_ENTER,      _,    
+  _,                KC_TRNS,          _,                _,                _,                                                    /* | */                                                 KC_KP_0,          KC_KP_0,          KC_KP_DOT,        KC_KP_ENTER,      _,    
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             _,                                  /* | */                               _,    
