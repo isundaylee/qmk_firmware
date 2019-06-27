@@ -35,6 +35,7 @@
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define NUMS 2
+#define COOK 3
 
 enum custom_keycodes {
   EPRM = SAFE_RANGE,
@@ -53,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSPO,          KC_Z,             KC_X,             KC_C,             KC_V,             KC_B,             _,                /* | */             _,                KC_N,             KC_M,             KC_COMMA,         KC_DOT,           KC_SLASH,         KC_RSPC,
   MO(SYMB),         TT(NUMS),         _,                KC_LALT,          KC_LCMD,                                              /* | */                                                 KC_LEFT,          KC_DOWN,          KC_UP,            KC_RIGHT,         _,    
                                                                                                                                 /* | */
-                                                                          _,                _,                                  /* | */                               _,                _,    
+                                                                          _,                _,                                  /* | */                               TG(COOK),         _,    
                                                                                             LCAG(KC_NO),                        /* | */                               _,    
                                                         KC_SPACE,         KC_LCMD,          MO(SYMB),                           /* | */                               MO(SYMB),         KC_BSPACE,        KC_ENTER
 ),
@@ -80,6 +81,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             _,                                  /* | */                               _,    
                                                         KC_TRNS,          KC_TRNS,          _,                                  /* | */                               _,                KC_BSPACE,        KC_ENTER
+),
+
+[COOK] = LAYOUT_ergodox_flip_pretty(
+  KC_ESC,           _,                _,                _,                _,                _,                _,                /* | */             _,                _,                _,                _,                _,                _,                KC_ESC,
+  KC_SPACE,         _,                KC_W,             _,                _,                _,                KC_LSFT,          /* | */             KC_RSFT,          _,                _,                _,                KC_UP,            _,                KC_SPACE,    
+  _,                KC_A,             KC_S,             KC_D,             _,                _,                                  /* | */                               _,                _,                KC_LEFT,          KC_DOWN,          KC_RIGHT,         _,          
+  _,                _,                _,                _,                _,                _,                KC_LCTRL,         /* | */             KC_RCTRL,         _,                _,                _,                _,                _,                _,          
+  _,                _,                _,                _,                _,                                                    /* | */                                                 _,                _,                _,                _,                _,    
+                                                                                                                                /* | */
+                                                                          _,                _,                                  /* | */                               TG(COOK),         _,    
+                                                                                            _,                                  /* | */                               _,    
+                                                        KC_LALT,          _,                _,                                  /* | */                               _,                _,                KC_RALT
 ),
 
 };
