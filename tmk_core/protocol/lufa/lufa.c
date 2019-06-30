@@ -625,6 +625,13 @@ static void send_keyboard(report_keyboard_t *report)
       for (uint8_t i = 0; i < KEYBOARD_REPORT_KEYS; i++) {
         bluefruit_serial_send(report->keys[i]);
       }
+    #elif MODULE_ERGO
+      serial_send(0xFD);
+      serial_send(report->mods);
+      serial_send(report->reserved);
+      for (uint8_t i = 0; i < KEYBOARD_REPORT_KEYS; i++) {
+        serial_send(report->keys[i]);
+      }
     #else
       bluefruit_serial_send(0xFD);
       bluefruit_serial_send(report->mods);
@@ -682,6 +689,7 @@ static void send_mouse(report_mouse_t *report)
     #ifdef MODULE_ADAFRUIT_BLE
       // FIXME: mouse buttons
       adafruit_ble_send_mouse_move(report->x, report->y, report->v, report->h, report->buttons);
+    #elif MODULE_ERGO
     #else
       bluefruit_serial_send(0xFD);
       bluefruit_serial_send(0x00);
@@ -756,6 +764,7 @@ static void send_consumer(uint16_t data)
     if (where == OUTPUT_BLUETOOTH || where == OUTPUT_USB_AND_BT) {
       #ifdef MODULE_ADAFRUIT_BLE
         adafruit_ble_send_consumer_key(data, 0);
+      #elif MODULE_ERGO
       #elif MODULE_RN42
         static uint16_t last_data = 0;
         if (data == last_data) return;

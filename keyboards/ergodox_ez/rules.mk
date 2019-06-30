@@ -91,3 +91,5 @@ endif
 
 
 LAYOUTS = ergodox
+
+BLUETOOTH = ERGO

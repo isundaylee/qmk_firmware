@@ -34,14 +34,12 @@ void matrix_init_kb(void) {
     DDRB  &= ~(1<<4);  // set B(4) as input
     PORTB &= ~(1<<4);  // set B(4) internal pull-up disabled
 
-    // unused pins - C7, D4, D5, D7, E6
+    // unused pins - C7, D4, D5, D7
     // set as input with internal pull-up enabled
     DDRC  &= ~(1<<7);
     DDRD  &= ~(1<<5 | 1<<4);
-    DDRE  &= ~(1<<6);
     PORTC |=  (1<<7);
     PORTD |=  (1<<5 | 1<<4);
-    PORTE |=  (1<<6);
 
     ergodox_blink_all_leds();
 
