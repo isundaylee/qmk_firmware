@@ -74,8 +74,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [FEAT] = LAYOUT_ergodox_flip_pretty(
   _,                KC_F1,            KC_F2,            KC_F3,            KC_F4,            KC_F5,            KC_F6,            /* | */             KC_F7,            KC_F8,            KC_F9,            KC_F10,           KC_F11,           KC_F12,           _,    
-  LCTL(KC_TAB),     _,                LCTL(KC_W),       _,                _,                _,                KC_VOLU,          /* | */             KC_BRMU,          KC_DOWN,          KC_RIGHT,         _,                _,                _,                _,     
-  KC_TRNS,          _,                _,                _,                _,                _,                                  /* | */                               KC_LEFT,          _,                _,                _,                _,                _,    
+  LCTL(KC_TAB),     SCMD(KC_Q),       LCTL(KC_W),       _,                _,                _,                KC_VOLU,          /* | */             KC_BRMU,          KC_DOWN,          KC_RIGHT,         _,                _,                _,                _,     
+  KC_TRNS,          SCMD(KC_A),       SCMD(KC_S),       _,                _,                _,                                  /* | */                               KC_LEFT,          _,                SCMD(KC_K),       SCMD(KC_L),       SCMD(KC_SCOLON),  _,    
   KC_TRNS,          _,                _,                SGUI(KC_LBRC),    SGUI(KC_RBRC),    _,                KC_VOLD,          /* | */             KC_BRMD,          KC_UP,            _,                _,                _,                _,                _,    
   KC_TRNS,          _,                _,                KC_TRNS,          KC_TRNS,                                              /* | */                                                 KC_HOME,          KC_PGDN,          KC_PGUP,          KC_END,           _,    
                                                                                                                                 /* | */
