@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,    
                                                                                             _,                                  /* | */                               _,    
-                                                        KC_SPACE,         KC_TRNS,          _,                                  /* | */                               KC_TRNS,          KC_DELETE,        KC_ENTER
+                                                        KC_MPLY,          KC_TRNS,          _,                                  /* | */                               KC_TRNS,          KC_DELETE,        KC_ENTER
 ),
 
 [NUMS] = LAYOUT_ergodox_flip_pretty(
