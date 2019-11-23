@@ -44,6 +44,8 @@ enum custom_keycodes {
   RGB_SLD,
   MY_HOME,
   MY_ARROW,
+  MY_NUMS_Y,
+  MY_NUMS_N,
 };
 
 #define _ KC_NO
@@ -88,9 +90,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [NUMS] = LAYOUT_ergodox_flip_pretty(
   KC_TRNS,          _,                _,                _,                _,                _,                _,                /* | */             _,                _,                _,                KC_KP_SLASH,      KC_KP_ASTERISK,   KC_KP_MINUS,      _,
-  KC_TRNS,          _,                _,                _,                _,                _,                _,                /* | */             _,                _,                KC_KP_7,          KC_KP_8,          KC_KP_9,          KC_KP_MINUS,      _,
+  KC_TRNS,          _,                _,                _,                _,                _,                _,                /* | */             _,                MY_NUMS_Y,        KC_KP_7,          KC_KP_8,          KC_KP_9,          KC_KP_MINUS,      _,
   KC_TRNS,          _,                _,                _,                _,                _,                                  /* | */                               _,                KC_KP_4,          KC_KP_5,          KC_KP_6,          KC_KP_PLUS,       KC_TRNS,
-  KC_TRNS,          _,                _,                _,                _,                _,                KC_TRNS,          /* | */             _,                _,                KC_KP_1,          KC_KP_2,          KC_KP_3,          KC_KP_ENTER,      KC_TRNS,
+  KC_TRNS,          _,                _,                _,                _,                _,                KC_TRNS,          /* | */             _,                MY_NUMS_N,        KC_KP_1,          KC_KP_2,          KC_KP_3,          KC_KP_ENTER,      KC_TRNS,
   _,                KC_TRNS,          _,                KC_TRNS,          KC_TRNS,                                              /* | */                                                 KC_KP_0,          KC_KP_0,          KC_KP_DOT,        KC_KP_ENTER,      _,
                                                                                                                                 /* | */
                                                                           _,                _,                                  /* | */                               _,                _,
@@ -128,6 +130,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
       case MY_ARROW:
         SEND_STRING ("->");
+        return false;
+      case MY_NUMS_Y:
+        SEND_STRING ("y");
+        layer_invert(NUMS);
+        return false;
+      case MY_NUMS_N:
+        SEND_STRING ("n");
+        layer_invert(NUMS);
         return false;
     }
   }
